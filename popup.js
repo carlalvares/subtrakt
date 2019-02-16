@@ -1,7 +1,11 @@
-//Wire up event event handlers
-document.addEventListener("DOMContentLoaded", function(event) {
-    var resultsButton = document.getElementById("getResults");
-    resultsButton.onclick = getResults();
+// Inject the payload.js script into the current tab after the popout has loaded
+window.addEventListener('load', function (evt) {
+	chrome.extension.getBackgroundPage().chrome.tabs.executeScript(null, {
+		file: 'payload.js'
+	});;
 });
 
-function getResults(){ alert('Hello World') }
+// Listen to messages from the payload.js script and write to popout.html
+chrome.runtime.onMessage.addListener(function (message) {
+	document.getElementById('pagetitle').innerHTML = message;
+});
