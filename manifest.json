@@ -5,8 +5,6 @@
   "description": "A simple page-scraping extension for Chrome",
   "version": "1.0",
   "author": "@thomasforth",
-
-
   "background": {
     "scripts": ["background.js"],
     "persistent": true

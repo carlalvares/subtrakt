@@ -4,6 +4,7 @@ chrome.webNavigation.onCompleted.addListener(function() {
 }, {url: [{urlMatches : 'https://www.spotify.com/[a-z|-]*/account/subscription/'}]});
 
 chrome.runtime.onMessage.addListener(function (message) {
+
   //const pattern = 'subscription-status[^\.]*\.';
   //const y = message.match(pattern);
   const x = message.search("recurring-date");
