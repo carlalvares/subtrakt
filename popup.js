@@ -1,27 +1,34 @@
-document.addEventListener('DOMContentLoaded', function (evt)
- {
+document.addEventListener('DOMContentLoaded', function (evt) {
 
- 	//if (localStorage["spotifydat"] == null) {
+var tbinput;
+var tbinput2;
 
-	var tbinput;
-	var tbinput2;
+tbinput = document.getElementById("tbinput");
+tbinput2 = document.getElementById("tbinput2");
+document.getElementById("btadd").addEventListener('click', addDate);
+document.getElementById("btadd2").addEventListener('click', addPrice);
 
-	tbinput = document.getElementById("tbinput");
-	tbinput2 = document.getElementById("tbinput2");
-	document.getElementById("btadd").addEventListener('click', addDate);
-	document.getElementById("btadd2").addEventListener('click', addPrice);
+var spotifyDate;
+if (localStorage["spotifydat"] == "null") {
+  spotifyDate = "Not Applicable";
+} else {
+  spotifyDate = localStorage["spotifydat"]
+}
 
-	document.getElementById('dat').innerHTML = localStorage["spotifydat"];
-	document.getElementById('prc').innerHTML = localStorage["spotifyprc"];
+document.getElementById('spotifydat').innerHTML = spotifyDate;
+document.getElementById('spotifyprc').innerHTML = localStorage["spotifyprc"];
+
+document.getElementById('netflixdat').innerHTML = localStorage["netflixdat"];
+document.getElementById('netflixprc').innerHTML = localStorage["netflixprc"];
 
 });
 
- 	function addDate() {
-	  localStorage["spotifydat"] = tbinput.value; // add textbox value to array
-	  tbinput.value = ''; // clear textbox value
-	};
+function addDate() {
+  localStorage["spotifydat"] = tbinput.value;
+  tbinput.value = '';
+};
 
-	function addPrice() {
-	  localStorage["spotifyprc"] = tbinput2.value; // add textbox value to array
-	  tbinput2.value = ''; // clear textbox value
-	};
+function addPrice() {
+  localStorage["spotifyprc"] = tbinput2.value;
+  tbinput2.value = '';
+};
