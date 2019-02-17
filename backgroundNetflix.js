@@ -5,7 +5,7 @@ chrome.webNavigation.onCompleted.addListener(function() {
   chrome.runtime.onMessage.addListener(function (message) {
     const netflixBillingInfoIndex = message.search("billingSummaryContents");
     if (netflixBillingInfoIndex == -1) {
-        localStorage["status"]="free";
+        localStorage["netflixprc"]="free";
     } else {
       const netflixBillingInfo = message.substring(netflixBillingInfoIndex + 16, netflixBillingInfoIndex + 1100);
       const num = netflixBillingInfo.search("data-uia");

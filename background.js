@@ -20,13 +20,8 @@ chrome.runtime.onMessage.addListener(function (message) {
   } else {
 	  const subi = message.substring(temp+17, temp+40);
 	  const numi = subi.search("</b>");
-	  alert(numi);
 	  const resulti = subi.substring(0,numi);
 	  localStorage["spotifyprc"] = resulti;
-}
+  }
 
-
-
-
-  //alert(x);
 });
