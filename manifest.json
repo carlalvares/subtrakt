@@ -5,7 +5,6 @@
   "description": "A simple page-scraping extension for Chrome",
   "version": "1.0",
   "author": "@thomasforth",
-
   "background": {
     "scripts": ["background.js"],
     "persistent": true
@@ -18,7 +17,7 @@
         "webNavigation"
     ],
   "browser_action": {
-    "default_icon": "logo.png",
+    "default_icon": "panthers.png",
     "default_popup": "popup.html"
   }
 }
