@@ -1,13 +1,13 @@
 {
   "manifest_version": 2,
 
-  "name": "Hello World",
-  "description": "A simple page-scraping extension for Chrome",
+  "name": "SubTrakt",
+  "description": "An extension to track your subscriptions and remind you when they're due",
   "version": "1.0",
-  "author": "@thomasforth",
+  "author": "Carl, Yash, Thang, Muhammad, Madlyn",
 
   "background": {
-    "scripts": ["background.js", "billingReminder.js"],
+    "scripts": ["background.js", "billingReminder.js", "backgroundNetflix.js"],
     "persistent": true
   },
 
@@ -18,7 +18,7 @@
         "webNavigation"
     ],
   "browser_action": {
-    "default_icon": "logo.png",
+    "default_icon": "panthers.png",
     "default_popup": "popup.html"
   }
 }
